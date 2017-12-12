@@ -1,0 +1,100 @@
+@import "variable";
+
+.article-excerpt, .article {
+  header {
+    h3 {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      line-height: 1;
+      font-weight: 600;
+      color: $article-header-color;
+      padding-bottom: 10px;
+      a {
+        text-decoration: none;
+        letter-spacing: 1px;
+        color: $article-header-color;
+        &:visited {
+          color: $article-header-color;
+        }
+      }
+    }
+  }
+
+  footer {
+    font-size: 12px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid #f2f2f2;
+    &:before, &:after {
+      display: table;
+      content: " ";
+    }
+    &:after {
+      clear: both;
+    }
+    .left {
+      float: left;
+      color: $article-footer-color;
+      a {
+        color: $article-footer-color;
+        cursor: pointer;
+        text-decoration: none;
+        &:visited {
+          color: $article-footer-color;
+        }
+      }
+    }
+    .right {
+      float: right;
+      a {
+        color: $article-footer-color;
+        text-decoration: none;
+        cursor: pointer;
+        &:visited {
+          color: $article-footer-color;
+        }
+      }
+    }
+  }
+}
+
+.article-nav {
+
+  list-style: none;
+  padding-left: 0;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #f2f2f2;
+  &:before, &:after {
+    display: table;
+    content: " ";
+  }
+  &:after {
+    clear: both;
+  }
+  .article-nav-prev {
+    float: left;
+  }
+  .article-nav-next {
+    float: right;
+  }
+  .article-nav-prev, .article-nav-next {
+    a {
+      font-size: 14px;
+      text-decoration: none;
+      color: $btn-color;
+      padding: 0.5em 1.25em;
+      border: 1px solid $border-color;
+      border-radius: $border-radius;
+      display: inline-block;
+      transition: all .4s;
+      &:visited {
+        color: $btn-color;
+        transition: all .4s;
+      }
+      &:hover {
+        color: $pg-hover-color;
+        border-color: $pg-hover-color;
+        transition: all .4s;
+      }
+    }
+  }
+}

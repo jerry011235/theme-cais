@@ -1,0 +1,66 @@
+<% if(typeof excerpt !== 'undefined') { %>
+<div class="article-excerpt" id="article-excerpt-<%= item.title %>">
+    <header>
+        <h3>
+            <a href="<%- url_for(item.path) %>"><%= item.title %></a>
+        </h3>
+    </header>
+    <article>
+        <% if(item.excerpt) { %>
+            <%- item.excerpt %>
+        <% } else { %>
+            <%- item.content %>
+        <% } %>
+    </article>
+    <footer>
+        <div class="left">
+            <i class="fa fa-clock-o"></i>
+            <span><%= item.date.format('YYYY-MM-DD') %></span>
+            <i class="fa fa-comment-o"></i>
+            <a href="<%- url_for(item.path) %>#comments">Comments</a>
+        </div>
+        <div class="right">
+            <a href="<%- url_for(item.path) %>">
+                <i class="fa fa-plus"></i>
+            </a>
+        </div>
+    </footer>
+</div>
+<% } else { %>
+    <div class="article" id="article-<%= item.title %>">
+        <header>
+            <h3>
+                <a href="<%- url_for(item.path) %>"><%= item.title %></a>
+            </h3>
+        </header>
+        <article>
+            <%- item.content %>
+        </article>
+        <footer>
+            <div class="left">
+                <i class="fa fa-clock-o"></i>
+                <span><%= item.date.format('YYYY-MM-DD') %></span>
+                <!--<i class="fa fa-comment-o"></i>
+                <a href="<%- url_for(item.path) %>#comments">Comments</a>-->
+            </div>
+        </footer>
+    </div>
+    <!-- 非自定义文章显示上一篇和下一篇文章标题 -->
+    <% if(!isPage) { %>
+    <ul class="article-nav">
+        <% if(item.prev) { %>
+        <li class="article-nav-prev">
+            <a href="<%= url_for(item.prev.path) %>"><%= __('prev_article') %></a>
+        </li>
+        <% } %>
+        <% if(item.next) { %>
+        <li class="article-nav-next">
+            <a href="<%= url_for(item.next.path) %>"><%= __('next_article') %></a>
+        </li>
+        <% } %>
+    </ul>
+    <% } %>
+    <a class="comment" name="comment">
+        <%- partial('comment/entry', { item: item }) %>
+    </a>
+<% } %>

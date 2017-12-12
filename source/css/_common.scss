@@ -1,0 +1,26 @@
+@import "../../libs/font-awesome/font-awesome";
+@import "variable";
+@import "markdown";
+@import "../../libs/highlight/mono-blue";
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: $font-family;
+  font-size: $font-size;
+  color: $font-color;
+  line-height: $line-height;
+  zoom: 1;
+}
+
+.content {
+  max-width: 700px;
+  margin: 0 auto;
+  @include markdown;
+}
+
+h3 {
+  font-size: 1.75rem;
+}

@@ -1,0 +1,10 @@
+<div class="menu">
+    <div class="menu-toggle animated fadeInDown">
+        <a id="menu-toggle"><%= __('menu') %></a>
+    </div>
+    <div class="menu-content" id="menu-content">
+        <% theme.menu.forEach(function (menu) { %>
+        <a href="<%- url_for(menu.url) %>"><%= menu.title %></a>
+        <% }) %>
+    </div>
+</div>

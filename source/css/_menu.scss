@@ -1,0 +1,57 @@
+@import "variable";
+
+.menu {
+  position: absolute;
+  right: 2em;
+  top: 2em;
+  z-index: 1000;
+  font-size: 14px;
+
+  .menu-toggle {
+    border-radius: 999em;
+    a {
+      // font-size: 1em;
+      padding: 0.5em 1.25em;
+      border: 1px solid $border-color;
+      border-radius: $border-radius;
+      margin-top: 5px;
+      display: block;
+      max-width: 100px;
+      color: $btn-color;
+      text-decoration: none;
+      &:hover {
+        cursor: pointer;
+        background-color: $hover-bg-color;
+        color: $hover-color;
+      }
+    }
+  }
+
+  .menu-content {
+    display: inline-block;
+    visibility: hidden;
+    &.display {
+      visibility: visible;
+      // transition: all .2s;
+    }
+    a {
+      // font-size: 1em;
+      padding: $menu-padding;
+      border: 1px solid $border-color;
+      border-radius: $border-radius;
+      margin-top: 5px;
+      display: block;
+      max-width: 100px;
+      color: $btn-color;
+      text-decoration: none;
+      &:visited {
+        color: $btn-color;
+      }
+      &:hover {
+        cursor: pointer;
+        background-color: $hover-bg-color;
+        color: $hover-color;
+      }
+    }
+  }
+}

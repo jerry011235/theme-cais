@@ -1,0 +1,42 @@
+@import "variable";
+
+.pagination {
+  list-style: none;
+  padding-left: 0;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #f2f2f2;
+  &:before, &:after {
+    display: table;
+    content: " ";
+  }
+  &:after {
+    clear: both;
+  }
+  .pagination-prev {
+    float: left;
+  }
+  .pagination-next {
+    float: right;
+  }
+  .pagination-prev, .pagination-next {
+    a {
+      font-size: 14px;
+      text-decoration: none;
+      color: $btn-color;
+      padding: 0.5em 1.25em;
+      border: 1px solid $border-color;
+      border-radius: $border-radius;
+      display: inline-block;
+      transition: all .4s;
+      &:visited {
+        color: $btn-color;
+        transition: all .4s;
+      }
+      &:hover {
+        color: $pg-hover-color;
+        border-color: $pg-hover-color;
+        transition: all .4s;
+      }
+    }
+  }
+}

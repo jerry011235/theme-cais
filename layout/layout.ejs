@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="<%= config.author %>">
+    <% if(theme.open_webFont) { %>
+    <link rel="stylesheet" type="text/css"
+          href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=latin,latin-ext">
+    <% } %>
+    <% if (config.description) { %>
+    <meta name="description" content="<%= config.description %>">
+    <% } %>
+    <% let title = [config.title] %>
+    <% if (page.tag) {
+        title.unshift(`${__('tags')}: ${page.tag}`)
+    } %>
+    <% if (page.category) {
+        title.unshift(`${__('categories')}: ${page.category}`)
+    }%>
+    <% if (page.archive) {
+        title.unshift(`${__('archive_a')}`)
+    }%>
+    <% if (page.title) {
+        title.unshift(`${page.title}`)
+    }%>
+    <title><%= title.join(' | ') %></title>
+    <%- css(['css/animate.css', 'css/style.css']) %>
+    <script src="<%= url_for('js/highlight.js') %>"></script>
+    <!--<script src="<%= url_for('js/highlightjs-line-numbers.min.js') %>"></script>-->
+</head>
+<body>
+<div class="body">
+    <%- partial('_partial/menu') %>
+    <%- partial('_partial/header') %>
+    <div class="content">
+        <%- body %>
+    </div>
+</div>
+<footer class="footer">
+    <%- partial('_partial/footer') %>
+</footer>
+</body>
+<%- js(['js/jquery.min.js', 'js/menu.js', 'js/code.js'])%>
+</html>

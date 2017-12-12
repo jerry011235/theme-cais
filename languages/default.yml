@@ -1,0 +1,17 @@
+categories: Categories
+tags: Tags
+tagcloud: Tagcloud
+prev: Older Posts
+next: Newer Posts
+prev_article: prev post
+next_article: next post
+comment: Comment
+articles: Article
+tag: Tag
+category: Category
+archive_a: Archives
+archive_b: "Archives: %s"
+page: "Page: %d"
+recent_posts: "Recent Posts"
+read_more: "Read More"
+menu: Menu

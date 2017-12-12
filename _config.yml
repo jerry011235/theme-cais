@@ -1,0 +1,51 @@
+menu:
+  # index
+  - title: 首页
+    url: /
+  # archive
+  - title: 归档
+    url: archives
+  # 其他想要什么可以自己fork后添加, 参照hexo.io的文档来写
+
+links:
+  # twitter
+  - title: Github
+    icon: github
+    url: https://github.com/ZEROKISEKI
+  - title: Weibo
+    icon: weibo
+    url: https://www.douyu.com/feitou
+  - title: Twitter
+    icon: twitter
+    url: https://www.baidu.com
+  - title: Instagram
+    icon: instagram
+    url: https://www.baidu.com
+
+
+# 使用哪种评论系统就填写一个对应的配置, 只填写一个
+comment:
+  disqus:
+  changyan:
+    appid:
+    conf:
+  youyan:
+  gitment:
+      owner:
+      repo:
+      oauth:
+        client_id:
+        client_secret:
+
+comment_setting:
+  changyan:
+    hide_notice: true
+
+# hexo-renderer-sass配置
+node_sass:
+  outputStyle: compressed
+  precision: 5
+  sourceComments: false
+
+# 是否开启google webFont, 默认开启
+open_webFont: true

@@ -1,0 +1,27 @@
+<div class="archives">
+    <% if(site.posts.length > 0) {
+        var lastYear = null
+    %>
+    <div class="archive">
+        <% site.posts.sort('date', -1).forEach(function (post) {
+            var year = post.date.toDate().getFullYear() %>
+            <% if(lastYear !== +year) {
+                if(lastYear !== null) { %>
+                            </ul>
+                        </div>
+                    <div class="archive">
+                <% }
+                    lastYear = year
+                %>
+                        <h1 class="title"><%= lastYear %></h1>
+                        <ul class="posts">
+            <% } %>
+                            <li class="post">
+                                <a href="<%- url_for(post.path) %>"><%= post.title %></a>
+                                <span><%= post.date.format('MM-DD') %></span>
+                            </li>
+        <% }) %>
+        </ul>
+    </div>
+<% } %>
+</div>
