@@ -2,7 +2,7 @@
     <div class="log-title">
         <div class="info animated fadeInDown">
             <h1 title>
-                <a href="#"><%= config.title %></a>
+                <a href="/"><%= config.title %></a>
             </h1>
             <div class="description animated fadeInDown">
                 <p>♥ <%= config.description %> ♥</p>
@@ -18,7 +18,7 @@
             <% } else { %>
             <i class="fa fa-<%= link.icon %>"></i>
             <% } %>
-            <a href="<%= link.url %>"><%= link.title %></a>
+            <a href="<%= link.url %>" target="_blank"><%= link.title %></a>
         </div>
         <% }) %>
     </div>
