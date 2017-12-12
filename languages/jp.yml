@@ -1,0 +1,17 @@
+categories: 分類
+search: 検索
+tags: タグ
+tagcloud: タグ・クラウド
+prev: 古い投稿
+next: より新しいポスト
+prev_article: 前の投稿
+next_article: 次の投稿
+comment: メッセージを残します
+articles: 記事
+tag: タグ
+category: 分類
+archive_a: ファイル
+archive_b: "ファイル: %s"
+page: "%dページ目"
+recent_posts: 最近の投稿
+read_more: 続きを読みます
