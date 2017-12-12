@@ -7,6 +7,12 @@
 - 移动端自适应(原主题没有做的)
 - 图片使用lightGallery(原主题没有做的)
 
+### 使用
+
+在你的hexo站点目录下clone:
+
+    git clone https://github.com/ZEROKISEKI/theme-cais.git themes/cais
+
 ### 修改代码高亮样式
 
 目前已经设置的代码样式
