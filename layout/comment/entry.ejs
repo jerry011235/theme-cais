@@ -9,4 +9,7 @@ if (gitment.owner && gitment.repo && gitment.oauth.client_id && gitment.oauth.cl
 <%- partial('comment/gitment') %>
 <% }
 } else if (theme.comment.disqus) { %>
+<%- partial('comment/disqus') %>
+<% } else if (theme.comment.valine && theme.comment.valine.appId && theme.comment.valine.appKey) { %>
+<%- partial('comment/valine') %>
 <% } %>

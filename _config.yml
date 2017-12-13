@@ -36,6 +36,16 @@ comment:
       oauth:
         client_id:
         client_secret:
+  # 参考Valine官网配置项 https://valine.js.org/#/configuration
+  valine:
+    appId:
+    appKey:
+    placeholder:
+    # guest_info要配置数组
+    guest_info:
+    pageSize:
+    lang:
+    avatar:
 
 comment_setting:
   changyan:
