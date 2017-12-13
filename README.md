@@ -12,6 +12,14 @@
 在你的hexo站点目录下clone:
 
     git clone https://github.com/ZEROKISEKI/theme-cais.git themes/cais
+    
+**注意!!!**, 使用前应该在你的hexo站点目录安装`hexo-renderer-scss`:
+
+    npm install hexo-renderer-scss -save(国内可能有点问题)
+    
+    or 
+    
+    cnpm install hexo-renderer-scss -save    
 
 ### 修改代码高亮样式
 
